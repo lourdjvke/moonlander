@@ -1,2 +1,0 @@
-# moonlander
-Moonlander placeholder site
