@@ -159,10 +159,10 @@ header{overflow-x:clip}
 .links{max-width:calc(100% - 220px);min-width:0}
 
 
-/* Mobile agent icon containment */
+/* Mobile agent icon containment — preserve the horizontal strip */
 @media(max-width:899px){
   .agents{width:100%!important;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
-  .agents .tiles{width:100%!important;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding-inline:8px}
+  .agents .tiles{width:100%!important;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden;display:flex;flex-wrap:nowrap;justify-content:center;gap:clamp(6px,2vw,12px);padding-inline:8px}
   .agents .tiles>div{flex:0 1 64px;min-width:0;max-width:64px;box-sizing:border-box;display:flex;justify-content:center}
   .agents .tiles img{display:block;width:100%;max-width:64px;height:auto;object-fit:contain}
 }
