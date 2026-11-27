@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="color-scheme" content="light"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Mach — From conversation to URL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -137,6 +137,27 @@ footer .w{padding-top:70px}.fb{font-size:38px;font-weight:700;letter-spacing:-.0
 .sp{border-radius:50%;border:2px solid #ddd;border-top-color:var(--ink);animation:spn .7s linear infinite}.ck{color:#16a34a;font-weight:700;font-size:14px}
 .cr{display:inline-flex;align-items:center;gap:10px;background:var(--card);border-radius:14px;padding:10px 14px;font-weight:600;color:var(--ink);font-size:15px;animation:in .5s both;max-width:100%}.cr em{font-style:normal;font-size:12px;color:#15803d;background:#dcfce7;border-radius:99px;padding:2px 10px}
 @keyframes in{from{opacity:0;transform:translateY(6px)}}@keyframes spn{to{transform:rotate(360deg)}}
+
+/* Viewport lock and width containment */
+html,body{width:100%;max-width:100%;min-width:0;overflow-x:clip}
+html{touch-action:pan-x pan-y}
+body{touch-action:pan-x pan-y}
+img,svg,video,canvas{max-width:100%}
+.w{width:100%;min-width:0}
+main,section,footer,.stage,.grid,.demo,.chat,.cols,.nav{min-width:0;max-width:100%}
+.grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+.st3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:900px){.cols{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* Fixed, contained navigation */
+header{overflow-x:clip}
+.bar{width:95%!important;max-width:1240px;min-width:0;overflow:hidden}
+.bar>*{min-width:0;max-width:100%}
+.logo{min-width:0;flex:0 1 auto;overflow:hidden}
+.bar>.b{flex:0 1 auto;white-space:nowrap}
+.burger{flex:0 0 44px}
+.links{max-width:calc(100% - 220px);min-width:0}
+
 </style></head><body>
 <header id="h"><div class="bar">
 <a class="logo" href="#top" aria-label="Mach"><svg viewBox="0 0 40 26"><path d="M0 26V7L10 0l10 9L30 0l10 7v19H29V13l-9 8-9-8v13z"/></svg></a>
