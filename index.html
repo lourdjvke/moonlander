@@ -158,6 +158,15 @@ header{overflow-x:clip}
 .burger{flex:0 0 44px}
 .links{max-width:calc(100% - 220px);min-width:0}
 
+
+/* Mobile agent icon containment */
+@media(max-width:899px){
+  .agents{width:100%!important;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+  .agents .tiles{width:100%!important;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding-inline:8px}
+  .agents .tiles>div{flex:0 1 64px;min-width:0;max-width:64px;box-sizing:border-box;display:flex;justify-content:center}
+  .agents .tiles img{display:block;width:100%;max-width:64px;height:auto;object-fit:contain}
+}
+
 </style></head><body>
 <header id="h"><div class="bar">
 <a class="logo" href="#top" aria-label="Mach"><svg viewBox="0 0 40 26"><path d="M0 26V7L10 0l10 9L30 0l10 7v19H29V13l-9 8-9-8v13z"/></svg></a>
